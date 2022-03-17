@@ -12,8 +12,9 @@ Corona Archive is an application which aims to track Corona Infections via conta
 6. [Future updates](#fu)
 
 ## <a name="f">Features</a>
-- Registration for visitors and business owners
-- Login for visitors and business owners
+- Registration for **visitors** and **business owners**
+- Login for **visitors**, **business owners**, **hospitals**, and **agents**
+- **Agents** can add **hospitals**
 
 
 ## <a name="bw">Built with</a>

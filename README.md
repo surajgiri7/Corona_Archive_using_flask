@@ -131,7 +131,7 @@ We implemented the frontend of our application using HTML, Javascript, and CSS. 
 
 ## <a name="fu">Future updates</a>
 - [ ] Generate a QR code for business owners
-- [ ]Scan QR code to enter a business (We tried on creating a QR Scanner after a user clicks on the Scan QR button on the homepage but but we could not complete it due to time constraints. The partial code for the QR scanner could be found on the ./templates/afterLogin/scanQRcode.html)
+- [ ] Scan QR code to enter a business (We tried on creating a QR Scanner after a user clicks on the Scan QR button on the homepage but but we could not complete it due to time constraints. The partial code for the QR scanner could be found on the ./templates/afterLogin/scanQRcode.html)
 - [ ] Hospitals can mark users as infected
 
 ## <a name="r">References</a>

@@ -9,7 +9,7 @@
     <div class="forms">
         <h1>Place LOGIN</h1>
         <form method="POST" action="">
-            {{form.hidden_tag()}} 
+            {{form.csrf_token}} 
             <div class="user-pass">
                 {{form.username.label(class="user-pass")}}
                 {{form.username(class="user-pass")}}

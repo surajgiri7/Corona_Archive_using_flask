@@ -10,11 +10,11 @@
         <h1>Visitor Registration</h1>
         <form method="POST" action="">
             <!-- for CSRF token -->
-            {{form.hidden_tag()}} 
-            <div class="user-pass">
+            {{form.csrf_token}} 
+            <!-- <div class="user-pass">
                 {{form.username.label(class="user-pass")}}
                 {{form.username(class="user-pass")}}
-            </div>
+            </div> -->
             
             <div class="user-pass">
                 {{form.username.label(class="user-pass")}}

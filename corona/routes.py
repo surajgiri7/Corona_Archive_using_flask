@@ -75,7 +75,7 @@ def placeRegister():
     return render_template('./RegistrationPages/placeRegister.html', title='PlaceRegister', form=form)
 
 # route to Hospital Registration Page
-@app.route('/register/hospitalRegister', methods=['GET', 'POST'])
+@app.route('/agentLoggedin/hospitalRegister', methods=['GET', 'POST'])
 def hospitalRegister():
     # if anyone else except the user tries to add hospital, then redirect them to the homepage
     if session['user'] != 'Agent':
@@ -204,6 +204,17 @@ def agentLogin():
         else:
            flash('Login Unsuccessful Please check username and password', 'danger')
     return render_template('./LoginPages/agentLogin.html', title='HospitalLogin', form=form)
+
+# route for the imprint
+@app.route('/imprint')
+def imprint():
+    return render_template('imprint.html')
+
+
+@app.route('/scanQRcode')
+def scanQRcode():
+    return render_template('./afterLogin/scanQRcode.html')
+
 
 # route for the logout
 @app.route('/logout')

@@ -21,13 +21,46 @@ body {
   /* height: 100vh */
 }
 
-.footer {
+/* .footer {
   position: relative;
   background-color: black;
   color: #fff;
   text-align: center;
   margin-top: 10%;
   margin-bottom: 0%;
+  z-index: 1;
+} */
+
+.footer {
+  background-color: black;
+  color: white;
+  position: relative;
+  height: 35px;
+  margin-top: 5%;
+}
+
+.text_foot {
+  margin: auto;
+  display: inline-flex;
+  margin-left: 40%;
+  color: white;
+  font-size: 25px;
+}
+
+.scanner{
+  position: relative;
+  margin: 5px auto;
+  width: 50%;
+  height: 40%;
+  border: 20px black solid;
+  overflow: auto;
+  text-align: center;
+  border: black;
+}
+
+.scanner .scan_preview{
+  width: 50%;
+  height: 40%;
 }
 
 .container {

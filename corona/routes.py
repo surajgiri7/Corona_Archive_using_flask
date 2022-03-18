@@ -205,6 +205,17 @@ def agentLogin():
            flash('Login Unsuccessful Please check username and password', 'danger')
     return render_template('./LoginPages/agentLogin.html', title='HospitalLogin', form=form)
 
+# route for the imprint
+@app.route('/imprint')
+def imprint():
+    return render_template('imprint.html')
+
+
+@app.route('/scanQRcode')
+def scanQRcode():
+    return render_template('./afterLogin/scanQRcode.html')
+
+
 # route for the logout
 @app.route('/logout')
 def logout():

@@ -31,10 +31,10 @@
                     <ul>
                         <li><a href="{{ url_for('home') }}">Home</a></li>
                         {% if current_user.is_authenticated %}
-                            <li><a href="{{ url_for('logout') }}">Log Out</a></li>
+                        <li><a href="{{ url_for('logout') }}">Log Out</a></li>
                         {% else %}
-                            <li><a href="{{ url_for('selectLoginType') }}">Log In</a></li>
-                            <li><a href="{{ url_for('selectUserType') }}">Register</a></li>
+                        <li><a href="{{ url_for('selectLoginType') }}">Log In</a></li>
+                        <li><a href="{{ url_for('selectUserType') }}">Register</a></li>
                         {% endif %}
                     </ul>
                 </nav>
@@ -42,22 +42,31 @@
             <div class="home">
                 <div class="main">
                     {% with messages = get_flashed_messages(with_categories=true) %}
-                        {% if messages %}
-                            <div class="flash">
-                                {% for category, message in messages %}
-                                        <li>{{ message }}</li>
-                                {% endfor %}
-                            </div>    
-                        {% endif %}
+                    {% if messages %}
+                    <div class="flash">
+                        {% for category, message in messages %}
+                        <li>{{ message }}</li>
+                        {% endfor %}
+                    </div>
+                    {% endif %}
                     {% endwith %}
-                    {% block body %}{% endblock %}
+                    {% block body %}
+                    <footer class="footer">
+                        <script language="javascript" type="text/javascript" src="./footer.txt"></script>
+                    </footer>
+                    {% endblock %}
                 </div>
             </div>
         </div>
     </div>
-    <!-- <footer class="footer">
-        <script language="javascript" type="text/javascript" src="../footer.txt"></script>
-    </footer> -->
+    <div class="footer">
+        <div class="text_foot">
+            &copy; CopyRight| Corona Archive &nbsp; &nbsp; &nbsp;
+            <a href="{{ url_for('imprint') }}">
+                Imprint
+            </a>
+        </div>
+    </div>
 </body>
 
 </html>

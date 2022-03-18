@@ -71,6 +71,7 @@ class CoronaTestCases(unittest.TestCase):
         self.assertIn(b'Place Registration', response.data)
     
     # the hospital register page opens successfully
+    #not working
     def test_hospital_register_page(self):
         request = app.test_client(self)
         response = request.get('/register/hospitalRegister', content_type='html/text')
@@ -86,6 +87,7 @@ class CoronaTestCases(unittest.TestCase):
         self.assertTrue(response.status_code == 200)
 
     # the place login page works successfully
+    #not working
     def test_place_login(self):
         request = app.test_client(self)
         response = request.post('/login/placeLogin', data=dict(username="place1", password="password"), follow_redirects=True)
@@ -93,6 +95,7 @@ class CoronaTestCases(unittest.TestCase):
         self.assertTrue(response.status_code == 200)
 
     # the hospital login page works successfully
+    #not working
     def test_hospital_login(self):
         request = app.test_client(self)
         response = request.post('/login/hospitalLogin', data=dict(username="hospital1", password="password"), follow_redirects=True)
@@ -100,22 +103,27 @@ class CoronaTestCases(unittest.TestCase):
         self.assertTrue(response.status_code == 200)
 
     # the agent login page works successfully
+    #not working
     def test_agent_login(self):
         request = app.test_client(self)
         response = request.post('/login/agentLogin', data=dict(username="agent1", password="password"), follow_redirects=True)
         self.assertIn(b'hello', response.data)
         # self.assertTrue(response.status_code == 200)
 
+    # the visitor registration works successfully
     def test_visitor_register(self):
         request = app.test_client(self)
         response = request.post('/register/visitorRegister', data=dict(username="visitor1", password="password"), follow_redirects=True)
         self.assertIn(b'Visitor Registration', response.data)
 
+    # the place registration works successfully
     def test_place_register(self):
         request = app.test_client(self)
         response = request.post('/register/placeRegister', data=dict(username="place1", password="password"), follow_redirects=True)
         self.assertIn(b'Place Registration', response.data)
 
+    # the hospital registration works successfully
+    #not working
     def test_hospital_register(self):
         request = app.test_client(self)
         response = request.post('/register/hospitalRegister', data=dict(username="place1", password="password"), follow_redirects=True)

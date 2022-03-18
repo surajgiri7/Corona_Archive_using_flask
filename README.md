@@ -85,37 +85,37 @@ We implemented the frontend of our application using HTML, Javascript, and CSS. 
 ## <a name="fs">File Structure</a>
 	\main 	# github's branch
 	|
-	|--	\run.py
+	|---\run.py
     |
-    |-- \test_app.py
+    |---\test_app.py
 	|	
-	|--	\corona
+	|---\corona
 	|	|
-	|	|--	\static
+	|	|---\static
 	|	|	|
-	|	|	|--	\....	# CSS files and Images' folder
+	|	|	|---\....	# CSS files and Images' folder
 	|	|	
-	|	|--	\templates
+	|	|---\templates
 	|	|	|
-	|	|	|--	\....	# HTML files
+	|	|	|---\....	# HTML files
 	|	|	
-	|	|--	\__init.py__	
+	|	|---\__init.py__	
 	|	|	
-	|	|--	\corona.db
+	|	|---\corona.db
 	|	|	
-	|   |--	\forms.py	# the forms created within flask
+	|   |---\forms.py	# the forms created within flask
 	|	|	
-	|   |--	\models.py	# the database created
+	|   |---\models.py	# the database created
 	|	|	
-	|   |--	\routes.py	# the routes to various pages
+	|   |---\routes.py	# the routes to various pages
 	|	
-	|--	\test_main.py
+	|---\test_main.py
 	|	
-	|--	\environments\env	# created during installation of env)
+	|---\environments\env	# created during installation of env)
 	|	|
-	|	|--	\...		# files required for env
+	|	|---\...		# files required for env
 	|	
-	|--	\database.txt   # if you need to access the database from the terminal(CLI)
+	|---\database.txt   # if you need to access the database from the terminal(CLI)
 			
 ## <a name="as">Applicaiton status</a>
 * Created the frontend (GUI Pages) for all different pages for login, registration and verification using HTML, CSS and Javascript.

@@ -48,12 +48,12 @@ Install Virtual Environment .\
 create the Virtual Environment .\
     ```virtualenv env```
 
-Start the virtual environment. .\
-## for mac and linux
+### Start the virtual environment.
+### for mac and linux
     
     source env/bin/activate
 
-## for windows
+### for windows
 
     env\Scripts\activate 
 

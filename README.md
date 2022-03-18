@@ -90,31 +90,31 @@ We implemented the frontend of our application using HTML, Javascript, and CSS. 
     |---\test_app.py
 	|	
 	|---\corona
-	|	|
+	|   |
 	|	|---\static
-	|	|	|
-	|	|	|---\....	# CSS files and Images' folder
-	|	|	
-	|	|---\templates
-	|	|	|
-	|	|	|---\....	# HTML files
-	|	|	
-	|	|---\__init.py__	
-	|	|	
-	|	|---\corona.db
-	|	|	
+	|   |   |
+	|   |   |---\....	# CSS files and Images' folder
+	|   |	
+	|   |---\templates
+	|   |   |
+	|   |   |---\....	# HTML files
+	|   |	
+	|   |---\__init.py__	
+	|   |	
+	|   |---\corona.db
+	|   |	
 	|   |---\forms.py	# the forms created within flask
-	|	|	
+	|   |	
 	|   |---\models.py	# the database created
-	|	|	
+	|   |	
 	|   |---\routes.py	# the routes to various pages
-	|	
+	|
 	|---\test_main.py
-	|	
-	|---\environments\env	# created during installation of env)
-	|	|
-	|	|---\...		# files required for env
-	|	
+	|
+	|---\environments\env	# created during installation of env
+	|   |
+	|   |---\...		# files required for env
+	|
 	|---\database.txt   # if you need to access the database from the terminal(CLI)
 			
 ## <a name="as">Applicaiton status</a>

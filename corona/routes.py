@@ -75,7 +75,7 @@ def placeRegister():
     return render_template('./RegistrationPages/placeRegister.html', title='PlaceRegister', form=form)
 
 # route to Hospital Registration Page
-@app.route('/register/hospitalRegister', methods=['GET', 'POST'])
+@app.route('/agentLoggedin/hospitalRegister', methods=['GET', 'POST'])
 def hospitalRegister():
     # if anyone else except the user tries to add hospital, then redirect them to the homepage
     if session['user'] != 'Agent':

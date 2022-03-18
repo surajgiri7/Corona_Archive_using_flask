@@ -9,7 +9,7 @@ Corona Archive is an application which aims to track Corona Infections via conta
 4. [Getting started](#gs)
 5. [Implementation](#i)
 6. [File Structure](#fs)
-7. [Done Here](#dh)
+7. [Application status](#as)
 8. [Future updates](#fu)
 9. [References](#r)
 
@@ -117,22 +117,22 @@ We implemented the frontend of our application using HTML, Javascript, and CSS. 
 		
 		\database.txt   (if you need to access the database from the terminal(CLI))
 			
-## <a name="dh">Done Here</a>
-- [x] Created the frontend (GUI Pages) for all different pages for login, registration and verification using HTML, CSS and Javascript.
-- [x] Created the database using SQLite.
-- [x] Created various forms for login and register of users and places using flask-wtforms in forms.py.
-- [x] Created the login of the Agent, who only after registration, can create accounts for the hospitals.(We were firstly planning on creating a  register route for hospital though registration page but later on we followed the advice from Professor that only agents can create the accounts for hospitals.)
-- [x] Created thte database model in models.py
-- [x] Created routes to all the pages in routes.py
-- [x] Worked on Authentication with flask_login.
-- [x] Finally created a testing page with testcases for various pages and functions in our applicaton.
-- [x] Currently all the visitors are marked Negative for the infected attribute in the database
-- [x] We also used flask-bcrypt to hash the passwords so that noone else except the one who entered the password would be able to access the password.
+## <a name="as">Applicaiton status</a>
+* Created the frontend (GUI Pages) for all different pages for login, registration and verification using HTML, CSS and Javascript.
+* Created the database using SQLite.
+* Created various forms for login and register of users and places using flask-wtforms in forms.py.
+* Created the login of the Agent, who only after registration, can create accounts for the hospitals.(We were firstly planning on creating a  register route for hospital though registration page but later on we followed the advice from Professor that only agents can create the accounts for hospitals.)
+* Created thte database model in models.py
+* Created routes to all the pages in routes.py
+* Worked on Authentication with flask_login.
+* Finally created a testing page with testcases for various pages and functions in our applicaton.
+* Currently all the visitors are marked Negative for the infected attribute in the database
+* We also used flask-bcrypt to hash the passwords so that noone else except the one who entered the password would be able to access the password.
 
 ## <a name="fu">Future updates</a>
-- [ ] Generate a QR code for business owners
-- [ ] Scan QR code to enter a business (We tried on creating a QR Scanner after a user clicks on the Scan QR button on the homepage but but we could not complete it due to time constraints. The partial code for the QR scanner could be found on the ./templates/afterLogin/scanQRcode.html)
-- [ ] Hospitals can mark users as infected
+* Generate a QR code for business owners
+* Scan QR code to enter a business (We tried on creating a QR Scanner after a user clicks on the Scan QR button on the homepage but but we could not complete it due to time constraints. The partial code for the QR scanner could be found on the ./templates/afterLogin/scanQRcode.html)
+* Hospitals can mark users as infected
 
 ## <a name="r">References</a>
 Testing

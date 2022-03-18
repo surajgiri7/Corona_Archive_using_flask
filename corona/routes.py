@@ -42,7 +42,6 @@ def visitorRegister():
         flash(f'Account Created for {form.visitor_name.data}!', 'success')
         return redirect(url_for('home'))
     else:
-        # print(form.errors)
         flash(f'Something went wrong. Retry')
     return render_template('./RegistrationPages/visitorRegister.html', title='VisitorRegister', form=form)
 
@@ -55,9 +54,7 @@ def placeRegister():
         return redirect(url_for('home'))
     form = placeRegistrationForm() #instance of the visitor registration
     # if the form is valid, then feeding the data into the data base
-    print("fghj")
     if form.validate_on_submit():
-        # print("fghj")
         hashed_pwd = bcrypt.generate_password_hash(form.password.data).decode('utf-8')
         place = Place(username=form.username.data, 
                         password=hashed_pwd, 
@@ -79,6 +76,7 @@ def placeRegister():
 def hospitalRegister():
     # if anyone else except the user tries to add hospital, then redirect them to the homepage
     if session['user'] != 'Agent':
+        flash("You are not allowed to add hospital")
         return redirect(url_for('home'))
     # if current_user.is_authenticated: 
     #     flash(f'Hospital is already registered!')
@@ -115,15 +113,12 @@ def visitorLogin():
         return redirect(url_for('home'))
     form = visitorLoginForm()
     if form.validate_on_submit():
-        print('lol')
         visitor = Visitor.query.filter_by(username=form.username.data).first()
         if visitor and bcrypt.check_password_hash(visitor.password, form.password.data):
             session["user"] = "Visitor"
-            try:
-                login_user(visitor, remember=form.remember.data)
-                return redirect(url_for('home'))
-            except Exception as e: 
-                print(e)
+            login_user(visitor, remember=form.remember.data)
+            flash('You are logged in as Visitor!')
+            return redirect(url_for('home'))
         else:
            flash('Login Unsuccessful Please check username and password', 'danger')
     return render_template('./LoginPages/visitorLogin.html', title='VisitorLogin', form=form)
@@ -134,20 +129,13 @@ def placeLogin():
     if current_user.is_authenticated:
         return redirect(url_for('home'))
     form = placeLoginForm()
-    print('l')
     if form.validate_on_submit():
         place = Place.query.filter_by(username=form.username.data).first()
         if place and bcrypt.check_password_hash(place.password, form.password.data):
-            print('lll')
             session["user"] = "Place"
-            try:
-                login_user(place, remember=form.remember.data)
-                print('llllll')
-
-                return redirect(url_for('home'))
-                # return redirect(url_for('afterplaceLogin'))
-            except Exception as e: 
-                print(e)
+            login_user(place, remember=form.remember.data)
+            flash('You are logged in as Place!')
+            return redirect(url_for('home'))
         else:
            flash('Login Unsuccessful Please check username and password', 'danger')
     return render_template('./LoginPages/placeLogin.html', title='PlaceLogin', form=form)
@@ -171,15 +159,12 @@ def hospitalLogin():
         return redirect(url_for('home'))
     form = hospitalLoginForm()
     if form.validate_on_submit():
-        print('lol')
         hospital = Hospital.query.filter_by(username=form.username.data).first()
         if hospital and bcrypt.check_password_hash(hospital.password, form.password.data):
             session["user"] = "Hospital"
-            try:
-                login_user(hospital, remember=form.remember.data)
-                return redirect(url_for('home'))
-            except Exception as e: 
-                print(e)
+            login_user(hospital, remember=form.remember.data)
+            flash('You are logged in as Hospital!')
+            return redirect(url_for('home'))
         else:
            flash('Login Unsuccessful Please check username and password', 'danger')
     return render_template('./LoginPages/hospitalLogin.html', title='HospitalLogin', form=form)
@@ -191,16 +176,12 @@ def agentLogin():
         return redirect(url_for('home'))
     form = agentLoginForm()
     if form.validate_on_submit():
-        print('lol')
         agent = Agent.query.filter_by(username=form.username.data).first()
         if agent and (agent.password, form.password.data):
             session["user"] = "Agent"
-            try:
-                print('lolllll')
-                login_user(agent, remember=form.remember.data)
-                return redirect(url_for('afterAgentLogin'))
-            except Exception as e: 
-                print(e)
+            login_user(agent, remember=form.remember.data)
+            flash('You are logged in as Agent!')
+            return redirect(url_for('afterAgentLogin'))
         else:
            flash('Login Unsuccessful Please check username and password', 'danger')
     return render_template('./LoginPages/agentLogin.html', title='HospitalLogin', form=form)

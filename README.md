@@ -49,11 +49,12 @@ create the Virtual Environment .\
     ```virtualenv env```
 
 Start the virtual environment. .\
-for mac and linux .\
-```source env/bin/activate```
 
-for windows .\
-```env\Scripts\activate``` 
+    for mac and linux .\
+    ```source env/bin/activate```
+
+    for windows .\
+    ```env\Scripts\activate``` 
 
 Once the terminal with the virtual environment in our application's working directory is ready, enter the following commands to install the required packages.
 

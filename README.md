@@ -83,39 +83,39 @@ To run tests:
 We implemented the frontend of our application using HTML, Javascript, and CSS. No external frameworks or libraries were used in this application. The backend was implemented using Flask.
 
 ## <a name="fs">File Structure</a>
-	\main 	(github's branch)
-	
-		\run.py
-
-        \test_app.py
-		
-		\corona
-		
-			\static
-			
-				\....	(CSS files and Images' folder)
-			
-			\templates
-			
-				\....	(HTML files)	
-			
-			\__init.py__	
-			
-			\corona.db
-			
-			\forms.py	(includes the forms created within flask)
-			
-			\models.py	(includes the database created)
-			
-			\routes.py	(includes the routes to various pages)
-		
-		\test_main.py
-		
-		\environments\env	(created during installation of env)
-		
-			\...		(several files required for env)    
-		
-		\database.txt   (if you need to access the database from the terminal(CLI))
+	\main 	# github's branch
+	|
+	|--	\run.py
+    |
+    |-- \test_app.py
+	|	
+	|--	\corona
+	|	|
+	|	|--	\static
+	|	|	|
+	|	|	|--	\....	# CSS files and Images' folder
+	|	|	
+	|	|--	\templates
+	|	|	|
+	|	|	|--	\....	# HTML files
+	|	|	
+	|	|--	\__init.py__	
+	|	|	
+	|	|--	\corona.db
+	|	|	
+	|   |--	\forms.py	# the forms created within flask
+	|	|	
+	|   |--	\models.py	# the database created
+	|	|	
+	|   |--	\routes.py	# the routes to various pages
+	|	
+	|--	\test_main.py
+	|	
+	|--	\environments\env	# created during installation of env)
+	|	|
+	|	|--	\...		# files required for env
+	|	
+	|--	\database.txt   # if you need to access the database from the terminal(CLI)
 			
 ## <a name="as">Applicaiton status</a>
 * Created the frontend (GUI Pages) for all different pages for login, registration and verification using HTML, CSS and Javascript.

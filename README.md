@@ -91,7 +91,7 @@ We implemented the frontend of our application using HTML, Javascript, and CSS. 
 	|	
 	|---\corona
 	|   |
-	|	|---\static
+	|   |---\static
 	|   |   |
 	|   |   |---\....	# CSS files and Images' folder
 	|   |	

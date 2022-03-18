@@ -49,6 +49,6 @@ We implemented the frontend of our application using HTML, Javascript, and CSS. 
     * Suraj Giri
 
 ## <a name="fu">Future updates</a>
-- Generate a QR code for business owners
+- [x] Generate a QR code for business owners
 - Scan QR code to enter a business
 - Hospitals can mark users as infected

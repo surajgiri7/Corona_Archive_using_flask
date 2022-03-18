@@ -99,7 +99,7 @@ class CoronaTestCases(unittest.TestCase):
         app.config['WTF_CSRF_ENABLED'] = False
         request = app.test_client(self)
         response = request.post('/login/visitorLogin', data=dict(username="visitor1", password="password", form=" "), follow_redirects=True)
-        self.assertIn(b'This is a demo for Software Engineering!', response.data)
+        self.assertIn(b'Scan QR', response.data)
         # self.assertTrue(current_user.username == "visitor1")
         # self.assertTrue(response.status_code == 200)
     
@@ -123,33 +123,33 @@ class CoronaTestCases(unittest.TestCase):
         app.config['WTF_CSRF_ENABLED'] = False
         request = app.test_client(self)
         response = request.post('/login/placelogin', data=dict(username="place1", password="password", form=" "), follow_redirects=True)
-        self.assertIn(b'This is a demo for Software Engineering!', response.data)
+        self.assertIn(b'CopyRight', response.data)
         self.assertEqual(response.status_code, 200)
 
-    # # the hospital register page opens successfully
-    # #not working
+    # the hospital register page opens successfully
+    # not working
     def test_hospital_register_page(self):
         app.config['WTF_CSRF_ENABLED'] = False
         request = app.test_client(self)
         response = request.get('/agentLoggedin/hospitalRegister', content_type='html/text')
-        # self.assertEqual(response.status_code, 200)
-        self.assertIn(b'Hospital Registration', response.data)
+        self.assertIn(b'Add Hospital', response.data)
+        self.assertEqual(response.status_code, 200)
 
-    # # the hospital registration works successfully
-    # #not working
-    # def test_hospital_register(self):
-    #     app.config['WTF_CSRF_ENABLED'] = False
-    #     request = app.test_client(self)
-    #     response = request.post('/agentLoggedin/hospitalRegister', data=dict(username="hospital1", password="password", form=""), follow_redirects=True)
-    #     self.assertIn(b'Hospitals', response.data)
-    #     self.assertTrue(response.status_code == 200)
+    # the hospital registration works successfully
+    #not working
+    def test_hospital_register(self):
+        app.config['WTF_CSRF_ENABLED'] = False
+        request = app.test_client(self)
+        response = request.post('/agentLoggedin/hospitalRegister', data=dict(username="hospital1", password="password", form=""), follow_redirects=True)
+        self.assertIn(b'Hospitals', response.data)
+        self.assertTrue(response.status_code == 200)
 
     # the hospital login page works successfully
     def test_hospital_login(self):
         app.config['WTF_CSRF_ENABLED'] = False
         request = app.test_client(self)
         response = request.post('/login/hospitallogin', data=dict(username="hospital1", password="password", form=" "), follow_redirects=True)
-        self.assertIn(b'This is a demo for Software Engineering!', response.data)
+        self.assertIn(b'CopyRight', response.data)
         self.assertEqual(response.status_code, 200)
 
 

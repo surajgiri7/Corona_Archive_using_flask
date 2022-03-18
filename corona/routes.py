@@ -191,7 +191,7 @@ def agentLogin():
 def imprint():
     return render_template('imprint.html')
 
-
+# route for the page to scan QR Code
 @app.route('/scanQRcode')
 def scanQRcode():
     return render_template('./afterLogin/scanQRcode.html')
@@ -200,5 +200,6 @@ def scanQRcode():
 # route for the logout
 @app.route('/logout')
 def logout():
+    session["user"] = "Default"
     logout_user()
     return redirect(url_for('home'))
